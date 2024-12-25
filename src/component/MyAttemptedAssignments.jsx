@@ -6,7 +6,7 @@
 //     const [submissions , setSubmissions] = useState([]);
 
 //     useEffect(() => {
-//         fetch(`http://localhost:5000/submission-assignments?email=${user.email}`)
+//         fetch(`https://group-study-server-side-three.vercel.app/submission-assignments?email=${user.email}`)
 //         .then(res => res.json())
 //         .then(data =>setSubmissions(data))
 
@@ -76,7 +76,7 @@
 
 //     useEffect(() => {
 //         if (user?.email) {
-//             fetch(`http://localhost:5000/submission-assignments?email=${user.email}`)
+//             fetch(`https://group-study-server-side-three.vercel.app/submission-assignments?email=${user.email}`)
 //                 .then(res => res.json())
 //                 .then(data => setSubmissions(data))
 //                 .catch(error => console.error("Error fetching submissions:", error));
@@ -125,7 +125,7 @@ const MyAttemptedAssignments = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/submission-assignments?email=${user.email}`)
+            fetch(`https://group-study-server-side-three.vercel.app/submission-assignments?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => setSubmissions(data))
                 .catch(error => console.error("Error fetching submissions:", error));

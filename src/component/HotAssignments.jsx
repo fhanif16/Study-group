@@ -8,7 +8,7 @@ const HotAssignments = () => {
   const [assignments, setAssignments] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/assignments')
+    fetch('https://group-study-server-side-three.vercel.app/assignments')
       .then(res => res.json())
       .then(data => {
         console.log("Fetched assignments:", data); // Debugging to ensure no duplicates
@@ -18,7 +18,7 @@ const HotAssignments = () => {
   }, []);
 
   const handleDelete = (_id) => {
-    fetch(`http://localhost:5000/assignments/${_id}`, {
+    fetch(`https://group-study-server-side-three.vercel.app/assignments/${_id}`, {
       method: 'DELETE',
     })
       .then(res => res.json())

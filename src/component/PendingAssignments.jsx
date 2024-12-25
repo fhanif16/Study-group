@@ -12,7 +12,7 @@ const PendingAssignments = () => {
 
   useEffect(() => {
     
-    fetch('http://localhost:5000/pendding')
+    fetch('https://group-study-server-side-three.vercel.app/pendding')
       .then((res) => res.json())
       .then((data) => {
         const pendingAssignments = data.filter(
@@ -28,7 +28,7 @@ const PendingAssignments = () => {
   };
 
   const handleSubmitMarks = () => {
-    fetch(`http://localhost:5000/assignments/${selectedAssignment.assignment_id}`, {
+    fetch(`https://group-study-server-side-three.vercel.app/assignments/${selectedAssignment.assignment_id}`, {
       method: 'PATCH',
       body: JSON.stringify({
         marks: marks,
@@ -155,7 +155,7 @@ export default PendingAssignments;
 
 //   // Fetch pending assignments
 //   const fetchPendingAssignments = () => {
-//     fetch('http://localhost:5000/pendding')
+//     fetch('https://group-study-server-side-three.vercel.app/pendding')
 //       .then((res) => res.json())
 //       .then((data) => {
 //         setSubmissions(data); // Expect backend to return all assignments
@@ -177,7 +177,7 @@ export default PendingAssignments;
 //       return;
 //     }
 
-//     fetch(`http://localhost:5000/assignments/${selectedAssignment.assignment_id}`, {
+//     fetch(`https://group-study-server-side-three.vercel.app/assignments/${selectedAssignment.assignment_id}`, {
 //       method: 'PATCH',
 //       body: JSON.stringify({
 //         marks: marks,

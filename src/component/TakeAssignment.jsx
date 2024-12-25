@@ -25,7 +25,7 @@ const TakeAssignment = () => {
       status: "pending", 
     };
 
-    fetch('http://localhost:5000/allSubmittedAssignment', {
+    fetch('https://group-study-server-side-three.vercel.app/allSubmittedAssignment', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "cause": "Group Coding Sessions",
+        "picture": "https://img.freepik.com/free-photo/programmer-working-late-dark-office_23-2148871121.jpg",
+        "motivationalLine": "Code together, learn faster."
+    },
+    {
+        "id": 2,
+        "cause": "Math Problem-Solving Workshops",
+        "picture": "https://img.freepik.com/free-photo/students-working-mathematics-group_23-2149249041.jpg",
+        "motivationalLine": "Solve puzzles, master concepts."
+    },
+    {
+        "id": 3,
+        "cause": "Online Science Experiments",
+        "picture": "https://img.freepik.com/free-photo/kids-performing-experiment-online_23-2149265851.jpg",
+        "motivationalLine": "Explore the wonders of science."
+    },
+    {
+        "id": 4,
+        "cause": "Language Learning Groups",
+        "picture": "https://img.freepik.com/free-photo/learning-language-online_23-2149338652.jpg",
+        "motivationalLine": "Learn new languages together."
+    },
+    {
+        "id": 5,
+        "cause": "Book Club Discussions",
+        "picture": "https://img.freepik.com/free-photo/online-book-club-session_23-2149328573.jpg",
+        "motivationalLine": "Share insights, grow knowledge."
+    },
+    {
+        "id": 6,
+        "cause": "Study Accountability Groups",
+        "picture": "https://img.freepik.com/free-photo/students-keeping-track-progress_23-2149223450.jpg",
+        "motivationalLine": "Stay on track with peers."
+    },
+    {
+        "id": 7,
+        "cause": "Exam Preparation Bootcamps",
+        "picture": "https://img.freepik.com/free-photo/students-preparing-exams-together_23-2149164382.jpg",
+        "motivationalLine": "Boost your scores with group prep."
+    },
+    {
+        "id": 8,
+        "cause": "Online Tutoring Sessions",
+        "picture": "https://img.freepik.com/free-photo/online-lesson-concept_23-2149187024.jpg",
+        "motivationalLine": "Get help, share expertise."
+    },
+    {
+        "id": 9,
+        "cause": "Virtual Study Rooms",
+        "picture": "https://img.freepik.com/free-photo/students-studying-remotely_23-2149278653.jpg",
+        "motivationalLine": "Focus better in a group."
+    }
+]

@@ -530,14 +530,3 @@ export default PendingAssignments;
 //           </div>
 //         </Modal>
 //       )}
-
-//       {/* Confirmation Modal */}
-//       <Modal isOpen={isConfirmationVisible} onRequestClose={() => setIsConfirmationVisible(false)}>
-//         <h3>Marks Updated</h3>
-//         <button onClick={() => setIsConfirmationVisible(false)}>Close</button>
-//       </Modal>
-//     </div>
-//   );
-// };
-
-// export default PendingAssignments;

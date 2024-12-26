@@ -11,7 +11,7 @@ const PendingAssignments = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    // Fetch enriched submissions data from the server
+   
     fetch('https://group-study-online.vercel.app/submission-assignments2')
       .then((res) => res.json())
       .then((data) => {
@@ -50,7 +50,7 @@ const PendingAssignments = () => {
 
 
   const handleSubmitMarks = () => {
-    // Update local state without making an API request to change backend data
+   
     const updatedSubmission = {
       ...selectedAssignment,
       obtained_marks: marks,
@@ -64,7 +64,7 @@ const PendingAssignments = () => {
         : submission
     ));
     
-    // Send updated marks and status to the backend (MongoDB)
+ 
     fetch(`https://group-study-online.vercel.app/submission-assignments2/${selectedAssignment.assignment_id}`, {
       method: 'PATCH',
       headers: {
@@ -84,12 +84,12 @@ const PendingAssignments = () => {
         console.error('Error updating marks:', error);
       });
   
-    // Reset modal and form fields
+   
     setSelectedAssignment(null); 
     setMarks('');
     setFeedback('');
     
-    // Show confirmation modal
+  
     setIsConfirmationVisible(true);
   };
   
@@ -131,7 +131,7 @@ const PendingAssignments = () => {
         </table>
       </div>
 
-      {/* Modal for giving marks */}
+    
       {selectedAssignment && (
         <Modal isOpen={true} onRequestClose={() => setSelectedAssignment(null)}>
           <h3>Give Marks for Assignment: {selectedAssignment.title}</h3>
@@ -174,7 +174,7 @@ const PendingAssignments = () => {
         </Modal>
       )}
 
-      {/* Confirmation Modal */}
+      
       <Modal
         isOpen={isConfirmationVisible}
         onRequestClose={() => setIsConfirmationVisible(false)}

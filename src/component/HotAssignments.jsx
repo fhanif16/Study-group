@@ -6,7 +6,7 @@ const HotAssignments = () => {
   const [difficulty, setDifficulty] = useState('');
 
   useEffect(() => {
-    // Create query parameter string based on difficulty
+   
     const queryParams = difficulty ? `?difficulty=${difficulty}` : '';
 
     fetch(`https://group-study-online.vercel.app/assignments${queryParams}`)
@@ -16,7 +16,7 @@ const HotAssignments = () => {
         setAssignments(data);
       })
       .catch(err => console.error("Error fetching assignments:", err));
-  }, [difficulty]); // Re-fetch assignments when difficulty changes
+  }, [difficulty]); 
 
   const handleDelete = (_id) => {
     fetch(`https://group-study-online.vercel.app/assignments/${_id}`, {
@@ -33,7 +33,7 @@ const HotAssignments = () => {
       .catch(err => console.error("Error deleting assignment:", err));
   };
 
-  // Handle the difficulty dropdown change
+
   const handleDifficultyChange = (e) => {
     setDifficulty(e.target.value);
   };
@@ -42,7 +42,6 @@ const HotAssignments = () => {
     <div>
       <h1 className="text-center text-5xl mb-10">Our Top Assignments</h1>
 
-      {/* Difficulty Dropdown */}
       <div className="mb-4">
         <select 
           value={difficulty} 
@@ -56,7 +55,7 @@ const HotAssignments = () => {
         </select>
       </div>
 
-      {/* Assignments List */}
+     
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {assignments.map(assignment => (
           <HotAssignmentCard

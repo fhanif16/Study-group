@@ -63,7 +63,6 @@ const Whyus = () => {
                     </div>
                 </Zoom>
 
-                {/* Card 4 */}
                 <Zoom>
                     <div className="card bg-base-100 w-full h-[400px] shadow-xl transition-transform transform hover:scale-105">
                         <figure className="px-8 pt-8">

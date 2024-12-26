@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 const TakeAssignment = () => {
   const { id } = useParams();
   const { user } = useAuth();
-  const navigate = useNavigate(); // Updated for navigation after submission
+  const navigate = useNavigate(); 
 
   const submitAssignment = (e) => {
     e.preventDefault();

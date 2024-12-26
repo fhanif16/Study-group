@@ -75,7 +75,7 @@ const MyAttemptedAssignments = () => {
 
     useEffect(() => {
         if (user?.email) {
-            // Fetch assignments where student_email matches user.email
+            
             fetch(`https://group-study-online.vercel.app/submission-assignments2?email=${encodeURIComponent(user.email)}`)
                 .then(res => res.json())
                 .then(data => setSubmissions(data))
@@ -106,9 +106,9 @@ const MyAttemptedAssignments = () => {
                             <tr key={submission.assignment_id}>
                                 <td>{submission.title}</td>
                                 <td>{submission.status}</td>
-                                <td>{submission.marks}</td> {/* Assuming `marks` field contains the marks */}
+                                <td>{submission.marks}</td> 
                                 <td>{submission.feedback || 'No Feedback'}</td>
-                                <td>{submission.title}</td> {/* You may want to change this to assignment title */}
+                                <td>{submission.title}</td> 
                                 <td>{submission.description}</td>
                                 <td>{submission.difficulty}</td>
                                 <td>{submission.dueDate}</td>

@@ -218,7 +218,7 @@ const UpdateAssignment = () => {
     const [dueDate, setDueDate] = useState(null);
 
     useEffect(() => {
-        // Fetch the existing assignment data
+       
         fetch(`https://group-study-online.vercel.app/assignments/${_id}`)
             .then((res) => res.json())
             .then((data) => {
@@ -255,7 +255,7 @@ const UpdateAssignment = () => {
         };
 
         fetch(`https://group-study-online.vercel.app/assignments/${_id}`, {
-            method: 'PUT', // Use PUT or PATCH for updating data
+            method: 'PUT', 
             headers: {
                 'Content-Type': 'application/json',
             },

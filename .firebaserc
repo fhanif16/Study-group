@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "simple-firebase-5cf8f"
-  }
+    "default": "dimple-firebase-2428a",
+    "production": "dimple-firebase-2428a"
+  },
+  "targets": {},
+  "etags": {}
 }

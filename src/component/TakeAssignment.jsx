@@ -25,7 +25,7 @@ const TakeAssignment = () => {
       status: "pending", 
     };
 
-    fetch('https://group-study-server-side-three.vercel.app/allSubmittedAssignment', {
+    fetch('https://group-study-online.vercel.app/allSubmittedAssignment', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -42,7 +42,7 @@ const TakeAssignment = () => {
             showConfirmButton: false,
             timer: 1500,
           });
-          navigate('/assignments'); 
+          navigate('/allAssignments'); 
         } else {
           Swal.fire({
             position: "top-end",
@@ -104,4 +104,6 @@ const TakeAssignment = () => {
 };
 
 export default TakeAssignment;
+
+
 

@@ -42,7 +42,7 @@
 
 //         console.log('Assignment Created:', assignmentData);
 
-//         fetch(`https://group-study-server-side-three.vercel.app/assignments/${_id}`, {
+//         fetch(`https://group-study-online.vercel.app/assignments/${_id}`, {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json',
@@ -219,7 +219,7 @@ const UpdateAssignment = () => {
 
     useEffect(() => {
         // Fetch the existing assignment data
-        fetch(`https://group-study-server-side-three.vercel.app/assignments/${_id}`)
+        fetch(`https://group-study-online.vercel.app/assignments/${_id}`)
             .then((res) => res.json())
             .then((data) => {
                 setTitle(data.title || '');
@@ -254,7 +254,7 @@ const UpdateAssignment = () => {
             name: user?.displayName || 'Anonymous',
         };
 
-        fetch(`https://group-study-server-side-three.vercel.app/assignments/${_id}`, {
+        fetch(`https://group-study-online.vercel.app/assignments/${_id}`, {
             method: 'PUT', // Use PUT or PATCH for updating data
             headers: {
                 'Content-Type': 'application/json',

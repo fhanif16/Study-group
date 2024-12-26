@@ -11,7 +11,7 @@
     
 
 //      useEffect(()=> {
-//             fetch('https://group-study-server-side-three.vercel.app/hotAssignments')
+//             fetch('https://group-study-online.vercel.app/hotAssignments')
 //             .then(response => response.json())
               
 //             .then(data => setLastestAssignment(data))
@@ -21,7 +21,7 @@
 
 //           const handleDelete = (id) => {
 //         // Ensure the user is authorized to delete the assignment
-//         fetch(`https://group-study-server-side-three.vercel.app/assignments/${id}`, { method: 'DELETE' })
+//         fetch(`https://group-study-online.vercel.app/assignments/${id}`, { method: 'DELETE' })
 //             .then(response => response.json())
 //             .then(data => {
 //                 if (data.success) {
@@ -105,13 +105,13 @@ const Assignments = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        fetch('https://group-study-server-side-three.vercel.app/hotAssignments')
+        fetch('https://group-study-online.vercel.app/hotAssignments')
             .then(response => response.json())
             .then(data => setLastestAssignment(data));
     }, []);
 
     // const handleDelete = (id) => {
-    //     fetch(`https://group-study-server-side-three.vercel.app/assignments/${id}`, {
+    //     fetch(`https://group-study-online.vercel.app/assignments/${id}`, {
     //         method: 'DELETE',
     //         headers: {
     //             'Content-Type': 'application/json'
@@ -162,7 +162,7 @@ const Assignments = () => {
             //   });
     
     
-            fetch(`https://group-study-server-side-three.vercel.app/assignments/${_id}`, {
+            fetch(`https://group-study-online.vercel.app/assignments/${_id}`, {
                 
                 method:'DELETE'
             })

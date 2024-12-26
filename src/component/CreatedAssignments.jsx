@@ -42,7 +42,7 @@ const CreatedAssignments = () => {
 
         console.log('Assignment Created:', assignmentData);
 
-        fetch('https://group-study-server-side-three.vercel.app/allAssignments', {
+        fetch('https://group-study-online.vercel.app/allAssignments', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

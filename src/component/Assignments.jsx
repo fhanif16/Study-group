@@ -110,26 +110,7 @@ const Assignments = () => {
             .then(data => setLastestAssignment(data));
     }, []);
 
-    // const handleDelete = (id) => {
-    //     fetch(`https://group-study-online.vercel.app/assignments/${id}`, {
-    //         method: 'DELETE',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({ email: user.email }) // Pass the user's email
-    //     })
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             if (data.deletedCount>0) {
-    //                 alert('Assignment deleted successfully');
-    //                 setLastestAssignment(prevItems=>prevItems.filter(item => item._id !== id));
-    //             } else {
-    //                 alert('Failed to delete the assignment');
-    //             }
-    //         })
-    //         .catch(error => console.error('Error deleting assignment:', error));
-    // };
-
+    
     const handleUpdate = (id) => {
         // You can navigate to the update page or show a modal to update the assignment
         // Pass the assignment ID to the update form

@@ -13,7 +13,6 @@ const Register = () => {
     const [passwordError, setPasswordError] = useState('');
     const googleProvider = new GoogleAuthProvider();
 
-   
     const handleRegister = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -21,7 +20,6 @@ const Register = () => {
         const password = e.target.password.value;
         const photoURL = e.target.photoURL.value;
 
-        
         const passwordCriteria = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
         if (!passwordCriteria.test(password)) {
             setPasswordError(
@@ -29,10 +27,9 @@ const Register = () => {
             );
             return;
         }
-        setPasswordError(''); 
+        setPasswordError('');
         createUser(email, password)
             .then((result) => {
-              //  console.log(result.user);
                 Swal.fire({
                     title: 'Registration Successful',
                     text: 'Welcome to the platform!',
@@ -45,11 +42,9 @@ const Register = () => {
             });
     };
 
-  
     const handleGoogleLogin = () => {
         signInWithPopup(auth, googleProvider)
             .then((result) => {
-              //  console.log(result.user);
                 Swal.fire({
                     title: 'Login Successful',
                     text: 'Welcome back!',
@@ -63,82 +58,72 @@ const Register = () => {
     };
 
     return (
-        <div className="hero bg-base-200 min-h-screen">
-            <div className="hero-content flex-col">
-                <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Register now!</h1>
+        <div className="hero bg-base-200 min-h-screen flex justify-center items-center">
+            <div className="card bg-white shadow-xl rounded-lg w-full  p-6">
+                <div className="text-center">
+                    <h1 className="text-4xl font-semibold text-gray-700">Register Now!</h1>
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <form className="card-body" onSubmit={handleRegister}>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Name</span>
-                            </label>
-                            <input
-                                type="text"
-                                placeholder="Name"
-                                className="input input-bordered"
-                                name="name"
-                                required
-                            />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Photo URL</span>
-                            </label>
-                            <input
-                                type="url"
-                                placeholder="Photo URL"
-                                className="input input-bordered"
-                                name="photoURL"
-                                required
-                            />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                className="input input-bordered"
-                                name="email"
-                                required
-                            />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-                            <input
-                                type="password"
-                                placeholder="Password"
-                                className="input input-bordered"
-                                name="password"
-                                required
-                            />
-                            {passwordError && (
-                                <p className="text-red-500 text-sm mt-2">{passwordError}</p>
-                            )}
-                        </div>
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">Register</button>
-                        </div>
-                    </form>
-                    <p className="text-center mt-4">
-                        Already registered?{' '}
-                        <Link to="/login" className="btn btn-link">
-                            Login
-                        </Link>
-                    </p>
-                    <div className="text-center mt-4">
-                        <button
-                            onClick={handleGoogleLogin}
-                            className="btn btn-primary w-full"
-                        >
-                            Login with Google
-                        </button>
+                <form className="space-y-4" onSubmit={handleRegister}>
+                    <div className="form-control">
+                        <label className="label text-gray-600">Name</label>
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            className="input input-bordered w-full"
+                            name="name"
+                            required
+                        />
                     </div>
+                    <div className="form-control">
+                        <label className="label text-gray-600">Photo URL</label>
+                        <input
+                            type="url"
+                            placeholder="Photo URL"
+                            className="input input-bordered w-full"
+                            name="photoURL"
+                            required
+                        />
+                    </div>
+                    <div className="form-control">
+                        <label className="label text-gray-600">Email</label>
+                        <input
+                            type="email"
+                            placeholder="Your Email"
+                            className="input input-bordered w-full"
+                            name="email"
+                            required
+                        />
+                    </div>
+                    <div className="form-control">
+                        <label className="label text-gray-600">Password</label>
+                        <input
+                            type="password"
+                            placeholder="Your Password"
+                            className="input input-bordered w-full"
+                            name="password"
+                            required
+                        />
+                        {passwordError && (
+                            <p className="text-red-500 text-sm mt-2">{passwordError}</p>
+                        )}
+                    </div>
+                    <div className="form-control mt-6">
+                        <button className="btn btn-primary w-full">Register</button>
+                    </div>
+                </form>
+                <p className="text-center mt-4 text-gray-600">
+                    Already registered?{' '}
+                    <Link to="/login" className="text-blue-500 hover:underline">
+                        Login here
+                    </Link>
+                </p>
+                <div className="text-center mt-6">
+                    <button
+                        onClick={handleGoogleLogin}
+                        className="btn btn-outline w-full border-gray-400 text-gray-700"
+                    >
+                        Login with Google
+                    </button>
                 </div>
             </div>
         </div>

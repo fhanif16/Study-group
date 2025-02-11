@@ -31,22 +31,22 @@ const FAQ = () => {
     ];
 
     return (
-        <div className="faq-container p-4">
-            <h1 className="text-4xl font-bold text-center mb-8">Frequently Asked Questions</h1>
+        <div className="faq-container p-6 sm:p-8 lg:p-12">
+            <h1 className="text-4xl font-bold text-center mb-8 text-primary">Frequently Asked Questions</h1>
             <div className="space-y-4">
                 {faqs.map((faq, index) => (
                     <div
                         key={index}
-                        className="border border-gray-300 rounded-lg shadow-md bg-white"
+                        className="border border-gray-300 rounded-lg shadow-md bg-white overflow-hidden"
                     >
                         {/* Accordion Header */}
                         <button
                             onClick={() => toggleAccordion(index)}
-                            className="w-full text-left p-4 flex justify-between items-center"
+                            className="w-full text-left p-4 flex justify-between items-center bg-gray-100 hover:bg-gray-200 transition-colors duration-300"
                         >
                             <h2 className="text-xl font-semibold text-primary">{faq.question}</h2>
                             <span
-                                className={`transform transition-transform ${
+                                className={`transform transition-transform duration-300 ${
                                     activeIndex === index ? 'rotate-180' : 'rotate-0'
                                 }`}
                             >
@@ -55,7 +55,7 @@ const FAQ = () => {
                         </button>
                         {/* Accordion Content */}
                         <div
-                            className={`overflow-hidden transition-all duration-300 ${
+                            className={`transition-all duration-500 ease-in-out ${
                                 activeIndex === index ? 'max-h-screen p-4' : 'max-h-0'
                             }`}
                         >

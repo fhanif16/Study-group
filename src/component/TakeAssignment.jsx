@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import useAuth from './hooks/useAuth';
@@ -9,7 +6,7 @@ import Swal from 'sweetalert2';
 const TakeAssignment = () => {
   const { id } = useParams();
   const { user } = useAuth();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const submitAssignment = (e) => {
     e.preventDefault();
@@ -22,7 +19,7 @@ const TakeAssignment = () => {
       student_email: user.email,
       googleDoc: googleDoc,
       text: text,
-      status: "pending", 
+      status: "pending",
     };
 
     fetch('https://group-study-online.vercel.app/allSubmittedAssignment', {
@@ -42,7 +39,7 @@ const TakeAssignment = () => {
             showConfirmButton: false,
             timer: 1500,
           });
-          navigate('/allAssignments'); 
+          navigate('/allAssignments');
         } else {
           Swal.fire({
             position: "top-end",
@@ -64,46 +61,44 @@ const TakeAssignment = () => {
   };
 
   return (
-    <div className="card bg-base-100 w-full shadow-2xl">
-      <h1 className="text-5xl font-bold text-center">Submit Your Assignment</h1>
-      <form onSubmit={submitAssignment} className="card-body">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Google Doc Link</span>
-          </label>
-          <input
-            type="url"
-            name="googleDoc"
-            placeholder="Google doc"
-            className="input input-bordered"
-            required
-          />
-        </div>
+    <div className="flex justify-center items-center w-full bg-gray-100 min-h-screen">
+      <div className="card bg-base-100 w-full md:w-1/3 lg:w-1/4 shadow-2xl rounded-lg p-8 animate__animated animate__fadeIn">
+        <h1 className="text-2xl font-semibold text-center text-gray-700">Submit Your Assignment</h1>
+        <form onSubmit={submitAssignment} className="card-body">
+          <div className="form-control mb-6">
+            <label className="label">
+              <span className="label-text text-lg font-medium">Google Doc Link</span>
+            </label>
+            <input
+              type="url"
+              name="googleDoc"
+              placeholder="Enter your Google Doc URL"
+              className="input input-bordered w-full p-4 text-lg rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
 
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text text-lg font-medium">Quick Note</span>
+            </label>
+            <textarea
+              name="text"
+              placeholder="Add a quick note"
+              className="textarea textarea-bordered text-lg rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            ></textarea>
+          </div>
 
-        
-
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Quick Note</span>
-          </label>
-          <textarea
-            name="text"
-            placeholder="Add a quick note"
-            className="textarea textarea-bordered"
-            required
-          ></textarea>
-        </div>
-
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">Submit</button>
-        </div>
-      </form>
+          <div className="form-control">
+            <button className="btn btn-primary p-2 mt-4 w-full text-lg rounded-lg transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-105">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
 
 export default TakeAssignment;
-
-
-

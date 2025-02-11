@@ -7,6 +7,7 @@ import Feature from '../component/Feature';
 import HotAssignments from '../component/HotAssignments';
 import Assignments from '../component/Assignments';
 import Whyus from '../component/Whyus';
+import HotAssignmentCard from '../component/HotAssignmentCard';
 
 const Home = () => {
     return (
@@ -16,6 +17,8 @@ const Home = () => {
            
            
            <HowItWorks></HowItWorks>
+           
+           
            <Feature></Feature>
            <Whyus></Whyus>
 

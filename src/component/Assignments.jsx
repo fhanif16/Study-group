@@ -112,8 +112,7 @@ const Assignments = () => {
 
     
     const handleUpdate = (id) => {
-        // You can navigate to the update page or show a modal to update the assignment
-        // Pass the assignment ID to the update form
+        
     };
 
 

@@ -8,7 +8,7 @@ const PendingAssignments = () => {
   const [marks, setMarks] = useState("");
   const [feedback, setFeedback] = useState("");
   const [isConfirmationVisible, setIsConfirmationVisible] = useState(false);
-  const [isCardView, setIsCardView] = useState(false); // Toggle for table and card view
+  const [isCardView, setIsCardView] = useState(false); 
   const { user } = useAuth();
 
   useEffect(() => {

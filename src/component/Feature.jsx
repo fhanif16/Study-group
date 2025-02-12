@@ -79,7 +79,7 @@ defaultChecked />
 <h2 className="card-title">Stepani Eloi</h2>
 <p>Heart Lift isn’t just a donation page; it’s a movement of compassion and kindness. If you’re looking for a reliable, heartfelt, and effective way to give back to the community, this is the platform for you. Highly recommended! </p>
 <div className="card-actions justify-end">
-{/* <button className="btn btn-primary">Buy Now</button> */}
+
 </div>
 </div>
 </div>

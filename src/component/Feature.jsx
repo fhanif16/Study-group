@@ -4,7 +4,7 @@ const Feature = () => {
     return (
         <div>
 
-{/* return ( */}
+
 
 <div  className='bg-slate-50 mt-10'>
     <h1 className='text-center text-3xl font-bold py-10'>A Trusted study website by Thousands of People</h1>

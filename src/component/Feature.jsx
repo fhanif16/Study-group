@@ -31,7 +31,7 @@ defaultChecked />
 <h2 className="card-title">Althia Fernaldes</h2>
 <p>Heart lift isn’t just a donation page; it’s a movement of compassion and kindness. If you’re looking for a reliable, heartfelt, and effective way to give back to the community, this is the platform for you. Highly recommended! </p>
 <div className="card-actions justify-end">
-{/* <button className="btn btn-primary">Buy Now</button> */}
+
 </div>
 </div>
 </div>
